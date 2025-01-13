@@ -1,0 +1,20 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="page">
+    <ActionBar title="Login" class="action-bar" />
+    
+    <ScrollView>
+        <StackLayout class="p-4">
+            <Label text="Bem-vindo" class="text-2xl font-bold mb-4" />
+            
+            <Label text="Email" class="font-medium" />
+            <TextField text="{{ email }}" keyboardType="email" class="input mb-4 p-2 border rounded" />
+            
+            <Label text="Senha" class="font-medium" />
+            <TextField text="{{ password }}" secure="true" class="input mb-4 p-2 border rounded" />
+            
+            <Button text="Entrar" tap="{{ onLogin }}" class="btn btn-primary mb-2" />
+            <Button text="Registrar" tap="{{ onRegister }}" class="btn btn-secondary" />
+            
+            <ActivityIndicator busy="{{ isLoading }}" class="m-4" />
+        </StackLayout>
+    </ScrollView>
+</Page>
